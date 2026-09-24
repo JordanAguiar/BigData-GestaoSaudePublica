@@ -1,0 +1,76 @@
+para caso percam os dados que já estão em registro.csv, vacinas.csv
+
+CPF,Nome,Idade,DataNasc,Sexo,Situação
+86455319176,Gabriel Vieira,59,3021967,F,Janssen
+94256556001,Juliana Gomes,43,8061983,F,Pfizer-BioNTech (Comirnaty)
+42089883715,Rodrigo Barbosa,54,8011972,M,Febre Amarela
+61690530383,Matheus Barbosa,18,22032008,M,Tríplice Viral
+23192161116,Bruna Rocha,77,15051949,M,Tríplice Viral
+36464500880,Fernando Lima,23,23122002,F,Spikevax
+94098673800,Jessica Alves,66,8091960,F,Janssen
+1673892892,Juliana Silva,65,2091961,M,Dengvaxia
+50173844480,Beatriz Soares,39,29091987,F,AstraZeneca/Oxford
+87265645057,Amanda Rocha,42,2071984,M,Qdenga
+27357432840,Juliana Soares,20,12102005,F,Pneumocócica 10v
+56807794983,Bruno Lima,63,13081963,F,CoronaVac
+64832050826,Amanda Santos,31,11121994,M,Pfizer-BioNTech (Comirnaty)
+68208915394,Larissa Oliveira,53,2031973,M,AstraZeneca/Oxford
+69315597290,Bruna Costa,76,27051950,F,Gripal Trivalente
+45740764106,Letícia Ferreira,77,21041949,F,Tríplice Viral
+22103020480,Thiago Dias,48,18071978,F,Varicela
+49482255410,Carlos Barbosa,27,25121998,F,BCG
+92822474060,Marcelo Ribeiro,72,5051954,M,Pfizer-BioNTech (Comirnaty)
+99776803881,Diego Lima,27,13121998,F,Dengvaxia
+21772320315,Bruno Costa,35,14101990,M,Gripal Trivalente
+8413320100,Bruno Rocha,32,21111993,M,Dengvaxia
+67885348610,Letícia Costa,37,8061989,M,Pneumocócica 10v
+4818590479,João Alves,59,8011967,F,Tríplice Viral
+59177696050,Patricia Soares,53,11111972,F,HPV Quadrivalente
+20863300308,Juliana Lopes,44,23081982,F,Qdenga
+43717127462,Maria Ribeiro,71,20031955,M,Febre Amarela
+97564806966,Letícia Carvalho,68,26071958,F,Pfizer-BioNTech (Comirnaty)
+12360290037,Leonardo Lopes,69,24061957,F,Sputnik V
+97121694212,Leonardo Dias,61,12051965,F,Pneumocócica 10v
+93091121151,Gabriel Fernandes,62,2061964,F,Tetravalente
+53528364360,Marcelo Lima,21,2052005,M,Febre Amarela
+87954409252,Mariana Fernandes,63,23081963,F,Spikevax
+10074793373,Beatriz Pereira,32,20081994,F,Gripal Trivalente
+75191288220,Marcelo Costa,75,24081951,F,Tetravalente
+59735432692,João Fernandes,47,12021979,F,Janssen
+74331606988,Fernando Gomes,51,14061975,M,AstraZeneca/Oxford
+20922814295,Rodrigo Martins,25,5072001,F,Meningocócica C
+55526589811,Vanessa Rodrigues,35,6071991,M,Janssen
+69785498000,Fernando Alves,33,1121992,M,DTPa
+15962046218,Matheus Soares,26,10092000,F,DTPa
+78075753283,Carlos Rodrigues,20,10102005,F,BCG
+54567299469,Bruno Lopes,54,8041972,M,Febre Amarela
+1805151525,Bruno Santos,79,10041947,F,CoronaVac
+92133552383,Lucas Souza,55,12091971,M,HPV Quadrivalente
+57468428425,Bruno Vieira,67,11061959,F,Dengvaxia
+79106743412,Thiago Carvalho,45,8041981,M,Janssen
+39030235071,Diego Barbosa,46,24081980,M,Meningocócica C
+499945816,Pedro Souza,45,15071981,F,AstraZeneca/Oxford
+27584984304,Maria Rodrigues,26,5032000,F,Dengvaxia
+
+            vacinas.csv
+            
+95,Pfizer-BioNTech (Comirnaty),Pfizer,RP9884
+6,CoronaVac,Sinovac/Butantan,TX6239
+25,AstraZeneca/Oxford,Fiocruz/AstraZeneca,JV2309
+39,Janssen,Johnson & Johnson,HY3176
+46,Spikevax,Moderna,LC3687
+31,Sputnik V,Gamaleya,DE3106
+26,Gripal Trivalente,Instituto Butantan,PU9772
+19,Tríplice Viral,Bio-Manguinhos,UZ7841
+43,Febre Amarela,Bio-Manguinhos,LX3809
+9,Hepatite B,Instituto Butantan,KA3790
+8,Tetravalente,Sanofi Pasteur,GD4636
+84,DTPa,GSK,GQ3997
+71,Meningocócica C,GSK,FV4387
+41,Pneumocócica 10v,MSD,GK7692
+20,HPV Quadrivalente,MSD,FI3399
+13,Rotavírus,GSK,ZE4249
+42,Varicela,MSD,DM9469
+22,Dengvaxia,Sanofi Pasteur,DW7580
+74,Qdenga,Takeda,VV8453
+37,BCG,Fundação Ataulpho de Paiva,NA6546
