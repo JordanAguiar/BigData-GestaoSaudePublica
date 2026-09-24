@@ -43,11 +43,11 @@ def consultarPaciente():
 
 def cadastroVacina():
     print("""
-    ###################
-    # 1- ASTRAZENECA  #
-    # 2- PFIZER       #
-    # 3- CORONAVAC    #
-    ###################    
+    -------------------
+    | 1 - ASTRAZENECA |
+    | 2 - PFIZER      |
+    | 3 - CORONAVAC   |
+    -------------------    
     """)
     vacinaAplicada = int(input())
     match vacinaAplicada:

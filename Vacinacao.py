@@ -6,13 +6,13 @@ sistema = "on"
 #Loop de Registro
 while (sistema != "off"):
     print(""""
-    ###############Painel###############
-    # 1- Criar Planilha                #
-    # 2- Adicionar Paciente            #
-    # 3- Verificar Pacientes           #
-    # 4- Consultar Paciente            #
-    # 5- Finalizar Programa            #
-    ####################################
+    -------------| Painel |-------------
+    | 1 - Criar Planilha               |
+    | 2 - Adicionar Paciente           |
+    | 3 - Verificar Pacientes          |
+    | 4 - Consultar Paciente           |
+    | 5 - Finalizar Programa           |
+    ------------------------------------
     """) 
     painel = int(input())
     match painel:
