@@ -1,5 +1,6 @@
 import csv
 import random
+#bom dia
 
 def criacaoPlanilha():
     with open("registro.csv", "w", newline="", encoding="utf-8") as arquivo:
