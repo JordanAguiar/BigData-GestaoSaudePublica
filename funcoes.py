@@ -1,11 +1,10 @@
 import csv
-import random
-#bom dia
+
 
 def criacaoPlanilha():
     with open("registro.csv", "w", newline="", encoding="utf-8") as arquivo:
         escritor = csv.writer(arquivo)
-        escritor.writerow(["CPF","Nome", "Idade","DataNasc", "Sexo", "Situação"])
+        escritor.writerow(["CPF","Nome", "Idade","DataNasc", "Sexo", "Vacina"])
 
 # vai ser registrado o nome ou o codigo da vacina que ele vai tomar
 def adicionarPaciente():
@@ -14,22 +13,10 @@ def adicionarPaciente():
     idade = input("Idade: ")
     dataNasc = input("Data de Nascimento: ")
     sexo = input("Sexo(M/F): ")
-    verificacao = input("Vacina: ")
+    vacina = cadastroVacina()
     with open("registro.csv", "a", newline="", encoding="utf-8") as arquivo:
                 escritor = csv.writer(arquivo)
-                escritor.writerow([cpf, nome, idade, dataNasc, sexo, verificacao])
-    # verificacao = input("Vacina(s/n): ")
-    ''' if verificacao == "n":
-        # vacinaA = "VacinadoPE"
-        vacinaA = "Pendente"
-        with open("registro.csv", "a", newline="", encoding="utf-8") as arquivo:
-            escritor = csv.writer(arquivo)
-            escritor.writerow([cpf, nome, idade, dataNasc, sexo, vacinaA])
-    else:
-        vacinaB = "Vacinado"
-        with open("registro.csv", "a", newline="", encoding="utf-8") as arquivo:
-            escritor = csv.writer(arquivo)
-            escritor.writerow([cpf, nome, idade, dataNasc, sexo, vacinaB]) '''
+                escritor.writerow([cpf, nome, idade, dataNasc, sexo, vacina])
 
 def verificarPaciente():
     with open("registro.csv", "r", newline="", encoding="utf-8") as arquivo:
@@ -55,13 +42,22 @@ def consultarPaciente():
         print("Paciente não encontrado.")   
 
 def cadastroVacina():
-      id = random.randint(1, 100)
-      nomeVac = input("Informe o nome do medicamento: ")
-      fabricante = input("Informe o fabricante do medicamento: ")
-      lote = input("Informe o lote do medicamento: ")
-      with open("vacinas.csv", "a", newline="", encoding="utf-8") as arquivo:
-          escritor = csv.writer(arquivo)
-          escritor.writerow([id,nomeVac, fabricante, lote])
+    print("""
+    ###################
+    # 1- ASTRAZENECA  #
+    # 2- PFIZER       #
+    # 3- CORONAVAC    #
+    ###################    
+    """)
+    vacinaAplicada = int(input())
+    match vacinaAplicada:
+         case 1:
+              return "ASTRAZENECA"
+         case 2:
+              return "PFIZER"
+         case 3:
+              return "CORONAVAC" 
+         
 
 def listarVac():
     with open("vacinas.csv", "r", newline="", encoding="utf-8") as arquivo:
