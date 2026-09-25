@@ -8,12 +8,11 @@ Projeto acadêmico com foco em manipulação de dados (CSV) e introdução a con
 
 O sistema (`Vacinacao.py`) apresenta um painel interativo via terminal com as opções:
 
-1. **Criar Planilha** — gera o arquivo `registro.csv` com o cabeçalho (CPF, Nome, Idade, Data de Nascimento, Sexo, Vacina).
-2. **Adicionar Paciente** — cadastra um novo paciente e a vacina aplicada (AstraZeneca, Pfizer ou CoronaVac).
-3. **Verificar Pacientes** — lista todos os registros salvos.
-4. **Consultar Paciente** — busca um paciente específico pelo CPF.
-5. **Análise de informações** — abre um submenu com as análises de dados (veja abaixo).
-6. **Finalizar Programa** — encerra a execução.
+1. **Adicionar Paciente** — cadastra um novo paciente e a vacina aplicada (AstraZeneca, Pfizer ou CoronaVac).
+2. **Verificar Pacientes** — lista todos os registros salvos.
+3. **Consultar Paciente** — busca um paciente específico pelo CPF.
+4. **Análise de informações** — abre um submenu com as análises de dados (veja abaixo).
+5. **Finalizar Programa** — encerra a execução.
 
 ### Análise de informações (opção 5)
 
