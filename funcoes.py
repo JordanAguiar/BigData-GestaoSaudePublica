@@ -60,11 +60,12 @@ def cadastroVacina():
 
 def analiseInformacoes():
     print("""
-    Qual vacina voce quer analisar:
-    1 - PFIZER
-    2 - CORONAVAC
-    3 - ASTRAZENECA
-    4 - Se deseja apenas ver o comparativo entre as 3 vacinas
+    Escolha o que voce quer analisar:
+    1 - Vacina PFIZER
+    2 - Vacina CORONAVAC
+    3 - Vacina ASTRAZENECA
+    4 - Comparativo de aplicabilidade entre as 3 Vacinas
+    5 - Porcentagem de vacinados por Faixa etaria
     """)
     analise = int(input("Digite um numero: "))
     match analise:
@@ -121,5 +122,8 @@ def analiseInformacoes():
                     print("Digito incorreto!!")
         case 4:
               AnaliseGrafica.comparacaoVacinas()
+
+        case 5:
+            AnaliseGrafica.plotFaixaEtaria(AnaliseGrafica.df)
         case _:
             print("Digito incorreto!!")

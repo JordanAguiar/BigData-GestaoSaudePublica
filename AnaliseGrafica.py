@@ -18,7 +18,7 @@ def pfizerTomadas():
     print(f"Registro de pessoas que so tomaram Pfizer:\n{pfizer}")
 
 def pfizerMediaIdade():
-    media = pfizer["Idade"]
+    media = pfizer["Idade"].mean()
     print(f"A media de idade das pessoas que mais se vacinaram com a pfizer é de {media:.1f} anos")
 
 def pfizerModaIdade():
@@ -32,7 +32,7 @@ def coronavacTomadas():
     print(f"Registro de pessoas que so tomaram coronavac:\n{coronavac}")
 
 def coronavacMediaIdade():
-    media = coronavac["Idade"]
+    media = coronavac["Idade"].mean()
     print(f"A media de idade das pessoas que mais se vacinaram com a coronavac é de {media:.1f} anos")
 
 def coronavacModaIdade():
@@ -48,7 +48,7 @@ def astrazenecaTomadas():
 
 
 def astrazenecaMediaIdade():
-    media = astrazeneca["Idade"]
+    media = astrazeneca["Idade"].mean()
     print(f"A media de idade das pessoas que mais se vacinaram com a astrazeneca é de {media:.1f} anos")
 
 def astrazenecaModaIdade():
@@ -68,10 +68,46 @@ def comparacaoVacinas():
 
 
 def plotFaixaEtaria(df, dt = "DataNascimento"):
-    data_Nasc = pd.to_datetime(
-    df["DataNascimento"].astype(str).str.zfill(8), format="%d%m%Y", errors="coerce"
-    )
-    hj = pd.Timestamp.now()
-    df['Idade'] = (hj - data_Nasc).dt.days / 365.25
-    mediaIdade = df['Idade'].mean()
+    #para aumentar o retangulo do grafico
+    plt.figure(figsize = (9, 6))
 
+    # usando data de nascimento para calcular a idade
+    data_Nasc = pd.to_datetime(
+    df[dt].astype(str).str.zfill(8), format="%d%m%Y", errors="coerce"
+    )
+
+    # calculo para saber a idade 
+    hj = pd.Timestamp.now()
+    df['Idade'] = (hj - data_Nasc).dt.days // 365.25
+
+    # cria os grupos
+    # não sei se tiro os jovens...
+    df["faixa_etaria"] = pd.cut(df["Idade"],
+                                bins = [-1, 12, 17, 29, 59, 99],
+                                labels = [
+                                            "Crianças (0-12)",
+                                            "Adolescentes (13-17)",
+                                            "Jovens (18-29)",
+                                            "Adultos (30-59)",
+                                            "Idosos (60+)"
+                                    ]
+                            )
+    # calculando a porcentagem de pessoas vacinadas em cada grupo
+    cont = df["faixa_etaria"].value_counts(normalize = True,
+                                          sort = False) * 100
+    # o grafico de barras
+    gra = cont.plot(kind = "bar", color = "#3895e7c9", edgecolor = "black")
+    plt.title("Porcentagem de Vacinados por Faixa Etária")
+    plt.xlabel("Faixa Etária (grupos)")
+    plt.ylabel("Porcentagem (%)")
+    plt.xticks(rotation=10)
+    # para colocar a porcentagem em cima das barras
+    for i in gra.patches:
+        gra.annotate(f"{i.get_height():.1f}%",
+                     (i.get_x() + i.get_width() / 2.0, i.get_height()),
+                     ha = "center",
+                     va = "bottom",
+                     xytext = (0, 3),
+                     textcoords = "offset points")
+    plt.tight_layout()
+    plt.show()   
