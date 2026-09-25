@@ -14,7 +14,7 @@ O sistema (`Vacinacao.py`) apresenta um painel interativo via terminal com as op
 4. **Análise de informações** — abre um submenu com as análises de dados (veja abaixo).
 5. **Finalizar Programa** — encerra a execução.
 
-### Análise de informações (opção 5)
+### Análise de informações (opção 4)
 
 O módulo `AnaliseGrafica.py` concentra a análise exploratória dos dados de `registro.csv`, acessada pelo submenu da opção 5:
 
