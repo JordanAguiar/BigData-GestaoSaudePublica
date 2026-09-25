@@ -1,11 +1,6 @@
 import csv
 import AnaliseGrafica
 
-def criacaoPlanilha():
-    with open("registro.csv", "w", newline="", encoding="utf-8") as arquivo:
-        escritor = csv.writer(arquivo)
-        escritor.writerow(["CPF","Nome", "Idade","DataNasc", "Sexo", "Vacina"])
-
 # vai ser registrado o nome ou o codigo da vacina que ele vai tomar
 def adicionarPaciente():
     cpf = input("CPF: ")
@@ -44,6 +39,7 @@ def consultarPaciente():
 def cadastroVacina():
     print("""
     -------------------
+    | Qual vacina?    |
     | 1 - ASTRAZENECA |
     | 2 - PFIZER      |
     | 3 - CORONAVAC   |
@@ -60,21 +56,25 @@ def cadastroVacina():
 
 def analiseInformacoes():
     print("""
-    Escolha o que voce quer analisar:
-    1 - Vacina PFIZER
-    2 - Vacina CORONAVAC
-    3 - Vacina ASTRAZENECA
-    4 - Comparativo de aplicabilidade entre as 3 Vacinas
-    5 - Porcentagem de vacinados por Faixa etaria
+    --------------------------------------------------------
+    | Escolha o que voce quer analisar:                    |
+    | 1 - Vacina PFIZER                                    |
+    | 2 - Vacina CORONAVAC                                 |
+    | 3 - Vacina ASTRAZENECA                               | 
+    | 4 - Comparativo de aplicabilidade entre as 3 Vacinas |
+    | 5 - Porcentagem de vacinados por Faixa etaria        |
+    --------------------------------------------------------
     """)
     analise = int(input("Digite um numero: "))
     match analise:
         case 1:
             print("""
-            O que voce quer analisar?
-                1 - Registro de pessoas que tomaram Pfizer
-                2 - Media de idade de pessoas que tomaram Pfizer
-                3 - Moda da idade de pessoas que tomaram Pfizer
+            ------------------------------------------------------------
+            | O que voce quer analisar?                                |
+            |    1 - Registro de pessoas que tomaram Pfizer            |
+            |    2 - Media de idade de pessoas que tomaram Pfizer      |
+            |    3 - Moda da idade de pessoas que tomaram Pfizer       |
+            ------------------------------------------------------------
             """)
             decisao = int(input("Escolha um número: "))
             match decisao:
@@ -88,10 +88,12 @@ def analiseInformacoes():
                     print("Digito incorreto!!")
         case 2:
             print("""
-            O que voce quer analisar?
-                1 - Registro de pessoas que tomaram Coronavac
-                2 - Media de idade de pessoas que tomaram Coronavac
-                3 - Moda da idade de pessoas que tomaram Coronavac
+            ------------------------------------------------------------
+            | O que voce quer analisar?                                |
+            |    1 - Registro de pessoas que tomaram Coronavac         |
+            |    2 - Media de idade de pessoas que tomaram Coronavac   |
+            |    3 - Moda da idade de pessoas que tomaram Coronavac    |
+            ------------------------------------------------------------
             """)
             decisao = int(input("Escolha um número: "))
             match decisao:
@@ -105,10 +107,12 @@ def analiseInformacoes():
                     print("Digito incorreto!!")
         case 3:
             print("""
-            O que voce quer analisar?
-                1 - Registro de pessoas que tomaram astrazeneca
-                2 - Media de idade de pessoas que tomaram astrazeneca
-                3 - Moda da idade de pessoas que tomaram astrazeneca
+            ------------------------------------------------------------
+            | O que voce quer analisar?                                |
+            |    1 - Registro de pessoas que tomaram Astrazeneca       |
+            |    2 - Media de idade de pessoas que tomaram Astrazeneca |
+            |    3 - Moda da idade de pessoas que tomaram Astrazeneca  |
+            ------------------------------------------------------------
             """)
             decisao = int(input("Escolha um número: "))
             match decisao:
