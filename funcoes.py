@@ -49,7 +49,7 @@ def cadastroVacina():
     | 3 - CORONAVAC   |
     -------------------    
     """)
-    vacinaAplicada = int(input())
+    vacinaAplicada = int(input("Escolha: "))
     match vacinaAplicada:
          case 1:
               return "ASTRAZENECA"
