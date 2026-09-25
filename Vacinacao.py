@@ -14,7 +14,7 @@ while (sistema != "off"):
     | 5 - Finalizar Programa           |
     ------------------------------------
     """) 
-    painel = int(input())
+    painel = int(input("Selecione um número: "))
     match painel:
         case 1:
             funcoes.criacaoPlanilha()
