@@ -11,7 +11,8 @@ while (sistema != "off"):
     | 2 - Adicionar Paciente           |
     | 3 - Verificar Pacientes          |
     | 4 - Consultar Paciente           |
-    | 5 - Finalizar Programa           |
+    | 5 - Análise de informações       |
+    | 6 - Finalizar Programa           |
     ------------------------------------
     """) 
     painel = int(input("Selecione um número: "))
@@ -25,6 +26,8 @@ while (sistema != "off"):
         case 4:
             funcoes.consultarPaciente()
         case 5:
+            funcoes.analiseInformacoes()
+        case 6:
             sistema = "off"
         case _:
             print("Opção inválida!!")
