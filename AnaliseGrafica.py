@@ -18,7 +18,7 @@ def pfizerTomadas():
     print(f"Registro de pessoas que so tomaram Pfizer:\n{pfizer}")
 
 def pfizerMediaIdade():
-    media = pfizer["idade"]
+    media = pfizer["Idade"]
     print(f"A media de idade das pessoas que mais se vacinaram com a pfizer é de {media:.1f} anos")
 
 def pfizerModaIdade():
@@ -32,7 +32,7 @@ def coronavacTomadas():
     print(f"Registro de pessoas que so tomaram coronavac:\n{coronavac}")
 
 def coronavacMediaIdade():
-    media = coronavac["idade"]
+    media = coronavac["Idade"]
     print(f"A media de idade das pessoas que mais se vacinaram com a coronavac é de {media:.1f} anos")
 
 def coronavacModaIdade():
@@ -48,7 +48,7 @@ def astrazenecaTomadas():
 
 
 def astrazenecaMediaIdade():
-    media = astrazeneca["idade"]
+    media = astrazeneca["Idade"]
     print(f"A media de idade das pessoas que mais se vacinaram com a astrazeneca é de {media:.1f} anos")
 
 def astrazenecaModaIdade():
