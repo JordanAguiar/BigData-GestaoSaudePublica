@@ -5,7 +5,7 @@ sistema = "on"
 
 #Loop de Registro
 while (sistema != "off"):
-    print(""""
+    print("""
     -------------| Painel |-------------
     | 1 - Criar Planilha               |
     | 2 - Adicionar Paciente           |
@@ -14,7 +14,7 @@ while (sistema != "off"):
     | 5 - Finalizar Programa           |
     ------------------------------------
     """) 
-    painel = int(input())
+    painel = int(input("Escolha: "))
     match painel:
         case 1:
             funcoes.criacaoPlanilha()
@@ -28,7 +28,3 @@ while (sistema != "off"):
             sistema = "off"
         case _:
             print("Opção inválida!!")
-
-
-
-
