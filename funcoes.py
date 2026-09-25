@@ -1,6 +1,5 @@
 import csv
 
-
 def criacaoPlanilha():
     with open("registro.csv", "w", newline="", encoding="utf-8") as arquivo:
         escritor = csv.writer(arquivo)
@@ -23,9 +22,7 @@ def verificarPaciente():
         leitor = csv.reader(arquivo)
         for linha in leitor:
             print(linha) 
-# para fazer busca por CPF, a intenção é fazer isso quando o paciente já for registrado
-# assim não será cadastrado de novo e apenas atualizamos os dados
-# talvez algo que crie outro arquivo apenas para registro das vacinas e do cpf do paciente
+
 def consultarPaciente():
     cpf = input("Digite o CPF do paciente que deseja consultar: ")
     with open("registro.csv", "r", newline="", encoding="utf-8") as arquivo:
@@ -37,10 +34,12 @@ def consultarPaciente():
                 print(f"Idade: {linha[2]}")
                 print(f"Data de Nascimento: {linha[3]}")
                 print(f"Sexo: {linha[4]}")
-                print(f"Vacinas: {linha[5]}")
+                print(f"Vacina: {linha[5]}")
                 return
-        print("Paciente não encontrado.")   
+            
+        print("Paciente não encontrado!")
 
+                
 def cadastroVacina():
     print("""
     -------------------
@@ -57,10 +56,3 @@ def cadastroVacina():
               return "PFIZER"
          case 3:
               return "CORONAVAC" 
-         
-
-def listarVac():
-    with open("vacinas.csv", "r", newline="", encoding="utf-8") as arquivo:
-            leitor = csv.reader(arquivo)
-            for linha in leitor:
-                print(linha) 
